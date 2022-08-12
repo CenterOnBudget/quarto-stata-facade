@@ -1,0 +1,27 @@
+---
+title: "Scratch"
+format: 
+  revealjs:
+    self-contained: true
+    code-line-numbers: true  # Display line numbers in code blocks
+    include-after-body: addins/fix-code-blocks.html
+    
+execute: 
+  echo: true
+  eval: true  # Run code blocks in Python
+---
+
+
+```{python}
+#| include: false
+import stata_setup
+stata_setup.config("C:/Program Files/Stata17", "mp")
+```
+
+```{python}
+#| code-line-numbers: "2|3"
+%%stata
+sysuse auto
+mean trunk, over(rep78)
+```
+

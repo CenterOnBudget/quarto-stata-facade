@@ -1,0 +1,35 @@
+
+<!-- hide first line of code blocks -->
+
+<script>
+  document.querySelectorAll('[id^="cb"][id$="-1"]').forEach(function(el) {
+      el.parentElement.removeChild(el.nextSibling);
+  });
+</script>
+
+<style>
+  [id^="cb"][id$="-1"] {
+    display: none;
+  }
+</style>
+
+<!-- scroll code blocks -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  $("div.cell").each(function() {
+    $(this).find(".cell-output-stdout").wrapAll("<div class='inner-scroll'></div>");
+  });
+</script>
+
+<style>
+  .inner-scroll {
+    overflow: auto;
+    margin-right: 10px;
+  }
+  .cell-output-stdout pre {
+    overflow: visible;
+  }
+</style>
+

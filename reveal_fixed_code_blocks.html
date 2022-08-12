@@ -2282,13 +2282,13 @@ window.QuartoSupport = function () {
     <!-- hide first line of code blocks -->
 
     <script>
-      document.querySelectorAll('[id^="cb"][id$="-1"]').forEach(function(el) {
+      document.querySelectorAll('code.sourceCode > span:first-child').forEach(function(el) {
           el.parentElement.removeChild(el.nextSibling);
       });
     </script>
 
     <style>
-      [id^="cb"][id$="-1"] {
+      code.sourceCode > span:first-child {
         display: none;
       }
     </style>

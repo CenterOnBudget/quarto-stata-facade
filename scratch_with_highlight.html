@@ -3788,11 +3788,18 @@ begin:"\\b(abs|acos|asin|atan|atan2|atanh|ceil|cloglog|comb|cos|digamma|exp|floo
 <script>
   // reclass Python code blocks to Stata
   $('pre.python').addClass('stata').removeClass('python');
+  $('pre.stata code > span').each(function() {
+    var text = $(this).text();
+    var a = $(this).find("a").detach();
+    $(this).empty();
+    $(this).append(a);
+    $(this).append("<span class='rest-of-line'>" + text + "</span>");
+  });
   $('pre code.python').addClass('stata').addClass('language-stata').removeClass('python').removeClass('language-python');
   // highlight Stata code blocks
   hljs.configure({
     languages: ['stata'],
-    cssSelector: 'stata, pre.stata code > span',
+    cssSelector: 'stata code > span > span.rest-of-line, pre.stata code > span > span.rest-of-line',
     ignoreUnescapedHTML: true
   });
   hljs.highlightAll();

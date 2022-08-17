@@ -1,7 +1,3 @@
-# quarto-sandbox
+# stata-qmd
 
-- scratch: with addins/fix-code-blocks.html 
-- scratch_with_highight: with addins/stata-syntax-highlighting.html and addins/fix-code-blocks.html
-
-- reveal: no additions
-- reveal_fixed_code_blocks: with addins/fix-code-blocks.html
+An extension that hides the evidence of faking Stata dynamic content with Python code blocks and [Stata cell magic](https://www.stata.com/python/pystata/notebook/Magic%20Commands1.html).

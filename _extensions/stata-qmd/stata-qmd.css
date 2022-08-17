@@ -1,0 +1,38 @@
+
+/* Hide first line of Statacode blocks */
+.sourceCode .stata > span:first-child {
+  display: none;
+}
+
+/* Scroll code block output together */
+.cell-output-scroll {
+  overflow: auto;
+  margin-right: 10px;
+}
+.cell-output-stdout pre {
+  overflow: visible;
+}
+
+/* Syntax highlighting */
+.hljs-keyword {
+  color: var(--quarto-hl-fu-color);
+}
+.hljs-comment {
+  color: var(--quarto-hl-co-color);
+}
+.hljs-built_in {
+  color: var(--quarto-hl-fu-color);
+}
+.hljs-string {
+  color: var(--quarto-hl-st-color);
+}
+.hljs-symbol {
+  color: var(--quarto-hl-cn-color);
+}
+.hljs-number {
+  color: var(--quarto-hl-fl-color);
+}
+.hljs-operator {
+  color: var(--quarto-hl-op-color);
+}
+

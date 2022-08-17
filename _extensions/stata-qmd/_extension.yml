@@ -1,0 +1,6 @@
+title: Stata QMD
+author: Claire Zippel
+version: 0.0.1
+contributes:
+  filters:
+    - stata-qmd.lua

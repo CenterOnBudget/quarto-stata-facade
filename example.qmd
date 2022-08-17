@@ -1,0 +1,37 @@
+---
+title: "Stata QMD"
+format: html
+filters:
+  - stata-qmd
+    
+execute: 
+  echo: true
+---
+
+An extension that hides the evidence of faking Stata dynamic content with Python code blocks and [Stata cell magic](https://www.stata.com/python/pystata/notebook/Magic%20Commands1.html).
+
+```{python}
+#| include: false
+import stata_setup
+stata_setup.config("C:/Program Files/Stata17", "mp")
+```
+
+For example, the following markdown:
+
+```` markdown
+```{{python}}
+%%stata
+sysuse auto
+mean trunk, over(rep78)
+```
+````
+
+Yields this output:
+
+```{python}
+%%stata
+sysuse auto
+mean trunk, over(rep78)
+```
+
+Syntax highlighting is implemented with [highlight.js](https://highlightjs.org/).

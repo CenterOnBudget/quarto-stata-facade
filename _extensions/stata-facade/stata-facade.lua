@@ -40,9 +40,9 @@ if quarto.doc.isFormat("html:js") then
     end
 
   quarto.doc.addHtmlDependency({
-    name = "scroll",
+    name = "stata-facade",
     version = "0.0.1",
-    stylesheets = {"scroll.css"}
+    stylesheets = {"stata-facade.css"}
   })
 
 end

@@ -7,7 +7,7 @@ A Quarto extension that hides the evidence of faking Stata dynamic content with 
 To install this extension in your current directory (or into the Quarto project that you're currently working in), use the following command:
 
 ```
-quarto install extension centeronbudget/stata-facade
+quarto install extension centeronbudget/quarto-stata-facade
 ```
 
 This will install the extension under the _extensions subdirectory. If you're using version control, you will want to check in this directory.

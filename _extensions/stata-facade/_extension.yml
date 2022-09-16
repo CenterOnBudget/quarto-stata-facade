@@ -1,6 +1,6 @@
-title: Stata QMD
+title: Stata Facade
 author: Claire Zippel
 version: 0.0.1
 contributes:
   filters:
-    - stata-qmd.lua
+    - stata-facade.lua

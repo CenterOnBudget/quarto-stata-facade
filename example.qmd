@@ -1,14 +1,15 @@
 ---
-title: "Stata QMD"
-format: html
+title: "Stata Facade"
+format: 
+  html:
+    standalone: true
 filters:
-  - stata-qmd
-    
+  - stata-facade
 execute: 
   echo: true
 ---
 
-An extension that hides the evidence of faking Stata dynamic content with Python code blocks and [Stata cell magic](https://www.stata.com/python/pystata/notebook/Magic%20Commands1.html).
+Stata code can be executed within Quarto documents by way of Python code blocks and [Stata cell magic](https://www.stata.com/python/pystata/notebook/Magic%20Commands1.html). This extension makes documents appear to be executing the Stata code directly.
 
 ```{python}
 #| include: false
@@ -34,4 +35,8 @@ sysuse auto
 mean trunk, over(rep78)
 ```
 
-Syntax highlighting is implemented with [highlight.js](https://highlightjs.org/).
+The extension acts upon all executable Python code blocks which use the Stata cell magic. Non-executable code blocks are unaffected.
+
+The results of executing the code in a Stata cell magic code block are sometimes split across multiple cell output containers. In HTML documents and revealjs presentations, the extension wraps the ouput within a single enclosing div. Scrolling is applied to that div and removed from the individual containers.
+
+

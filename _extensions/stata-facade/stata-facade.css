@@ -1,7 +1,0 @@
-.cell-output-scroll {
-  overflow: auto;
-}
-
-.cell-output-scroll > .cell-output-stdout pre {
-  overflow: visible;
-}

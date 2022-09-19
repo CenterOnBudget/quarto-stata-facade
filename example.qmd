@@ -1,8 +1,6 @@
 ---
 title: "Stata Facade"
-format: 
-  html:
-    standalone: true
+format: html
 filters:
   - stata-facade
 execute: 
@@ -37,6 +35,5 @@ mean trunk, over(rep78)
 
 The extension acts upon all executable Python code blocks which use the Stata cell magic. Non-executable code blocks are unaffected.
 
-The results of executing the code in a Stata cell magic code block are sometimes split across multiple cell output containers. In HTML documents and revealjs presentations, the extension wraps the ouput within a single enclosing div. Scrolling is applied to that div and removed from the individual containers.
-
+In addition to making Stata cell magic code blocks appear to be pure Stata code, the extension also improves the appearance of Stata output. Stata output from a code block is sometimes split across multiple consecutive cell output containers, which causes annoying formatting issues especially in HTML documents and revealjs presentations. The extension consolidates output into a single cell output container. Note that output consiolidation is currently not supported for ouput that includes Stata graphics.
 

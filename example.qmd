@@ -1,5 +1,5 @@
 ---
-title: "Stata Facade"
+title: "Example Stata Facade Document"
 format: html
 filters:
   - stata-facade
@@ -7,15 +7,13 @@ execute:
   echo: true
 ---
 
-Stata code can be executed within Quarto documents by way of Python code blocks and [Stata cell magic](https://www.stata.com/python/pystata/notebook/Magic%20Commands1.html). This extension makes documents appear to be executing the Stata code directly.
-
 ```{python}
 #| include: false
 import stata_setup
 stata_setup.config("C:/Program Files/Stata17", "mp")
 ```
 
-For example, the following markdown:
+The following markdown:
 
 ```` markdown
 ```{{python}}
@@ -32,8 +30,4 @@ Yields this output:
 sysuse auto
 mean trunk, over(rep78)
 ```
-
-The extension acts upon all executable Python code blocks which use the Stata cell magic. Non-executable code blocks are unaffected.
-
-In addition to making Stata cell magic code blocks appear to be pure Stata code, the extension also improves the appearance of Stata output. Stata output from a code block is sometimes split across multiple consecutive cell output containers, which causes annoying formatting issues especially in HTML documents and revealjs presentations. The extension consolidates output into a single cell output container. Note that output consiolidation is currently not supported for ouput that includes Stata graphics.
 
